@@ -10,7 +10,7 @@ export default function App() {
 
 function Layout() {
     return (
-        <div className="min-h-screen bg-gradient-to-b from-theme-bg to-theme-bg-secondary text-white">
+        <div className="min-h-screen bg-linear-to-b from-theme-bg to-theme-bg-secondary text-white">
             <Header />
             <div className="mx-auto">
                 <Outlet />

@@ -1,7 +1,7 @@
 export function Hero() {
     return (
         <section className="relative overflow-hidden py-section">
-            <div className="absolute inset-0 bg-gradient-to-b from-theme-primary-dark via-theme-accent-dark to-theme-bg opacity-10"></div>
+            <div className="absolute inset-0 bg-linear-to-b from-theme-primary-dark via-theme-accent-dark to-theme-bg opacity-10"></div>
             <div className="container mx-auto px-4">
                 <div className="text-center">
                     <h1 className="font-display text-6xl font-bold text-theme-text mb-6">

@@ -1,6 +1,101 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@plugin '@tailwindcss/typography';
+
+@theme {
+  --color-theme-bg: #0f1115;
+  --color-theme-bg-secondary: #1a1d22;
+  --color-theme-bg-card: #23272e;
+  --color-theme-bg-border: #2a2f38;
+  --color-theme-bg-hover: #2e333d;
+
+  --color-theme-primary: #ff3366;
+  --color-theme-primary-hover: #ff4d7f;
+  --color-theme-primary-light: #ffe6ec;
+  --color-theme-primary-dark: #cc2952;
+
+  --color-theme-accent: #9f2bff;
+  --color-theme-accent-hover: #b355ff;
+  --color-theme-accent-light: #f2e6ff;
+  --color-theme-accent-dark: #7f22cc;
+
+  --color-theme-highlight: #ff9233;
+  --color-theme-highlight-hover: #ffa64d;
+  --color-theme-highlight-light: #fff1e6;
+  --color-theme-highlight-dark: #cc7529;
+
+  --color-theme-text: #f8f9fa;
+  --color-theme-text-secondary: #ced3d8;
+  --color-theme-text-muted: #9ba1a8;
+  --color-theme-text-accent: #ff3366;
+
+  --color-theme-success: #00cc88;
+  --color-theme-success-light: #e6fff5;
+
+  --color-theme-error: #ff3366;
+  --color-theme-error-light: #ffe6ec;
+
+  --color-theme-warning: #ff9233;
+  --color-theme-warning-light: #fff1e6;
+
+  --font-sans:
+    Inter, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  --font-display:
+    Manrope, ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --font-mono:
+    Fira Code, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    'Liberation Mono', 'Courier New', monospace;
+
+  --spacing-section: 5rem;
+  --spacing-header: 4rem;
+
+  --radius-card: 0.75rem;
+
+  --shadow-card: 0 4px 20px -2px rgba(0, 0, 0, 0.2);
+  --shadow-card-hover:
+    0 8px 30px -2px rgba(0, 0, 0, 0.3), 0 0 10px rgba(255, 51, 102, 0.2);
+
+  --animate-gradient: gradient 15s ease infinite;
+  --animate-glow: glow 2s ease-in-out infinite alternate;
+
+  @keyframes gradient {
+    0%,
+    100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+  @keyframes glow {
+    from {
+      box-shadow: 0 0 5px rgba(255, 51, 102, 0.5);
+    }
+    to {
+      box-shadow: 0 0 20px rgba(255, 51, 102, 0.8);
+    }
+  }
+}
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
 
 html,
 body {
