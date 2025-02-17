@@ -34,7 +34,14 @@ export default function BlogIndex() {
 
     return (
         <>
-            <h1 className="font-display text-4xl font-bold text-theme-text mb-8">Blog Posts</h1>
+            <section className="relative overflow-hidden py-section mb-6">
+                <div className="absolute inset-0 bg-radial from-theme-accent-dark from-20% to-theme-bg to-70% opacity-10 animate-gradient"></div>
+                <div className="container mx-auto px-4">
+                    <h1 className="font-display text-6xl font-bold text-theme-text text-center">
+                        Welcome to my <span className="text-theme-primary">Blog</span>
+                    </h1>
+                </div>
+            </section>
             <div className="space-y-8">
                 {posts.map(post => (
                     <BlogSnippet key={post.slug} post={post} />
