@@ -3,7 +3,7 @@ layout: post
 title: Building IDentify - A Prize Winning Solana Wallet Network Explorer
 date: 2024-11-23
 tags: [python, crypto, data analysis, hackathon]
-excerpt: IDentify is a prize winning tool that visualizes connections between Solana wallets by analyzing their on-chain interactions. The project won a $500 prize and helped address a crucial challenge in blockchain transparency.
+excerpt: IDentify is a prize winning tool that visualizes connections between Solana wallets by analyzing their on-chain interactions. The project won a $500 prize and helps address a crucial challenge in blockchain transparency.
 --- 
 
 I recently participated in a [Web3 AI London Hackathon](https://earn.superteam.fun/listings/bounty/web3-ai-summit-code-leverage-ai-to-build-on-solana/), where I built IDentify - a tool that visualizes connections between Solana wallets by analyzing their on-chain interactions. The project won a $500 prize and helped address a crucial challenge in blockchain transparency.

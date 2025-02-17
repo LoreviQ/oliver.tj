@@ -38,23 +38,23 @@ export default function BlogIndex() {
     const { posts } = useLoaderData<{ posts: BlogPost[] }>();
 
     return (
-        <div className="max-w-4xl mx-auto py-8 px-4">
-            <h1 className="text-4xl font-bold mb-8">Blog Posts</h1>
+        <>
+            <h1 className="font-display text-4xl font-bold text-theme-text mb-8">Blog Posts</h1>
             <div className="space-y-8">
                 {posts.map(post => (
-                    <article key={post.slug} className="border-b border-gray-700 pb-8">
-                        <h2 className="text-2xl font-semibold mb-2">
-                            <a href={`/blog/${post.slug}`} className="hover:text-theme-primary">
+                    <article key={post.slug} className="bg-theme-bg-card rounded-card p-6 shadow-card hover:shadow-card-hover transition-shadow">
+                        <h2 className="font-display text-2xl font-bold text-theme-text mb-2">
+                            <a href={`/blog/${post.slug}`} className="hover:text-theme-primary transition-colors">
                                 {post.title}
                             </a>
                         </h2>
-                        <div className="text-sm text-gray-400 mb-4">
+                        <div className="text-sm text-theme-text-muted mb-4">
                             {new Date(post.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })} • {post.tags.join(", ")}
                         </div>
-                        {post.excerpt && <p className="text-gray-300">{post.excerpt}</p>}
+                        {post.excerpt && <p className="text-theme-text-secondary">{post.excerpt}</p>}
                     </article>
                 ))}
             </div>
-        </div>
+        </>
     );
 } 

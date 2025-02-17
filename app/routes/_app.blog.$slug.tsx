@@ -38,19 +38,17 @@ export default function BlogPost() {
     const { post } = useLoaderData<{ post: BlogPost }>();
 
     return (
-        <div className="max-w-4xl mx-auto py-8 px-4">
-            <article>
-                <header className="mb-8">
-                    <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
-                    <div className="text-sm text-gray-400">
-                        {new Date(post.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })} • {post.tags.join(", ")}
-                    </div>
-                </header>
-                <div
-                    className="prose prose-invert max-w-none"
-                    dangerouslySetInnerHTML={{ __html: post.content }}
-                />
-            </article>
-        </div>
+        <article className="bg-theme-bg-card rounded-card p-8 shadow-card">
+            <header className="mb-8">
+                <h1 className="font-display text-4xl font-bold text-theme-text mb-4">{post.title}</h1>
+                <div className="text-sm text-theme-text-muted">
+                    {new Date(post.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })} • {post.tags.join(", ")}
+                </div>
+            </header>
+            <div
+                className="prose prose-invert prose-headings:font-display prose-headings:text-theme-text prose-p:text-theme-text-secondary max-w-none"
+                dangerouslySetInnerHTML={{ __html: post.content }}
+            />
+        </article>
     );
 } 
