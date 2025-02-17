@@ -13,7 +13,7 @@ interface BlogPost {
 }
 
 export const loader: LoaderFunction = async () => {
-    const postsPath = path.join(process.cwd(), "content", "blog");
+    const postsPath = path.join(process.cwd(), "app", "content", "blog");
     const posts = fs.readdirSync(postsPath)
         .filter(filename => filename.endsWith(".md"))
         .map(filename => {

@@ -14,7 +14,7 @@ interface BlogPost {
 
 export const loader: LoaderFunction = async ({ params }) => {
     const { slug } = params;
-    const filePath = path.join(process.cwd(), "content", "blog", `${slug}.md`);
+    const filePath = path.join(process.cwd(), "app", "content", "blog", `${slug}.md`);
 
     try {
         const fileContent = fs.readFileSync(filePath, "utf-8");
