@@ -1,8 +1,15 @@
 import { Outlet } from "@remix-run/react";
 
-export default function AppLayout() {
+
+export default function App() {
     return (
-        <div className="flex h-screen items-center justify-center">
+        <Layout />
+    );
+}
+
+function Layout() {
+    return (
+        <div className="min-h-screen bg-gradient-to-b from-theme-bg to-theme-bg-secondary text-white">
             <Outlet />
         </div>
     );
