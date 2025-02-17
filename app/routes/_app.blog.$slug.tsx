@@ -1,4 +1,4 @@
-import { json, type LoaderFunction } from "@remix-run/node";
+import { type LoaderFunction } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 import path from "path";
 import fs from "fs";
@@ -21,7 +21,7 @@ export const loader: LoaderFunction = async ({ params }) => {
         const { data, content } = matter(fileContent);
         const htmlContent = marked(content);
 
-        return json({
+        return Response.json({
             post: {
                 title: data.title,
                 date: data.date,
@@ -43,7 +43,7 @@ export default function BlogPost() {
                 <header className="mb-8">
                     <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
                     <div className="text-sm text-gray-400">
-                        {post.date} • {post.tags.join(", ")}
+                        {new Date(post.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })} • {post.tags.join(", ")}
                     </div>
                 </header>
                 <div

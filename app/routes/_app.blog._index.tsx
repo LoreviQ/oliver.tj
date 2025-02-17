@@ -49,7 +49,7 @@ export default function BlogIndex() {
                             </a>
                         </h2>
                         <div className="text-sm text-gray-400 mb-4">
-                            {post.date} • {post.tags.join(", ")}
+                            {new Date(post.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })} • {post.tags.join(", ")}
                         </div>
                         {post.excerpt && <p className="text-gray-300">{post.excerpt}</p>}
                     </article>
