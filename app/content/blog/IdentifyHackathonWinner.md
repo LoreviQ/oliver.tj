@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Building IDentify - A Prize Winning Solana Wallet Network Explorer
 date: 2024-11-23
 tags: [python, crypto, data analysis, hackathon]

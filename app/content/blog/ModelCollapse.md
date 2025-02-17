@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Exploring the Dangers of Model Collapse - A Deep Dive with Python
 date: 2024-09-24
 tags: [python, ai, data analysis, machine learning, nlp]

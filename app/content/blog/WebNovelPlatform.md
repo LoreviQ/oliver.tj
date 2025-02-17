@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Building WebNovelClient - A Full-Stack Platform for Sharing Stories
 date: 2024-08-28
 tags: [go, javascript, api, react, ci/cd]
