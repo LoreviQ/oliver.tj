@@ -38,7 +38,7 @@ export default function BlogIndex() {
                 <div className="absolute inset-0 bg-radial from-theme-accent-dark from-20% to-theme-bg to-70% opacity-10 animate-gradient"></div>
                 <div className="container mx-auto px-4">
                     <h1 className="font-display text-6xl font-bold text-theme-text text-center">
-                        Welcome to my <span className="text-theme-primary">Blog</span>
+                        My <span className="text-theme-primary">Blog</span>
                     </h1>
                 </div>
             </section>
