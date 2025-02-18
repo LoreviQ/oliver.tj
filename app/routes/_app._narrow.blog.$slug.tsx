@@ -1,42 +1,24 @@
-import { type LoaderFunction } from "@remix-run/node";
-import { useLoaderData, Link } from "@remix-run/react";
-import path from "path";
-import fs from "fs";
-import matter from "gray-matter";
-import { marked } from "marked";
-import { ChevronLeftIcon } from "~/components/icons";
 
-interface BlogPost {
-    title: string;
-    date: string;
-    tags: string[];
-    content: string;
-}
+import { type LoaderFunction } from "@remix-run/node";
+import { Link, useOutletContext, useLoaderData } from "@remix-run/react";
+
+
+import { ChevronLeftIcon } from "~/components/icons";
+import type { BlogPost } from "~/types/blog";
 
 export const loader: LoaderFunction = async ({ params }) => {
     const { slug } = params;
-    const filePath = path.join(process.cwd(), "app", "content", "blog", `${slug}.md`);
+    return Response.json({ slug });
+}
 
-    try {
-        const fileContent = fs.readFileSync(filePath, "utf-8");
-        const { data, content } = matter(fileContent);
-        const htmlContent = marked(content);
-
-        return Response.json({
-            post: {
-                title: data.title,
-                date: data.date,
-                tags: data.tags,
-                content: htmlContent
-            }
-        });
-    } catch (error) {
-        throw new Response("Not Found", { status: 404 });
-    }
-};
 
 export default function BlogPost() {
-    const { post } = useLoaderData<{ post: BlogPost }>();
+    const { posts } = useOutletContext<{ posts: BlogPost[] }>();
+    const { slug } = useLoaderData<{ slug: string }>();
+    const post = posts.find(post => post.slug === slug);
+    if (!post) {
+        throw new Response("Not Found", { status: 404 });
+    }
 
     return (
         <>

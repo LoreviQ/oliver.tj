@@ -4,4 +4,5 @@ export interface BlogPost {
     date: string;
     tags: string[];
     excerpt?: string;
+    content: string;
 } 

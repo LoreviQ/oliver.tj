@@ -6,6 +6,10 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import type { LinksFunction } from "@remix-run/node";
+import { glob } from "glob";
+import { readFileSync } from "fs";
+import matter from "gray-matter";
+import { json } from "@remix-run/node";
 
 import "./tailwind.css";
 
@@ -42,4 +46,27 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
 export default function App() {
   return <Outlet />;
+}
+
+export async function loader() {
+  // Load blog posts
+  const blogFiles = await glob("app/content/blog/*.md");
+  const blogPosts = blogFiles.map(file => {
+    const content = readFileSync(file, "utf-8");
+    const { data, content: markdown } = matter(content);
+    return {
+      ...data,
+      content: markdown,
+      filename: file.split("/").pop()
+    };
+  });
+
+  // Load projects
+  const projectFiles = await glob("app/content/project/*.json");
+  const projects = projectFiles.map(file => {
+    const content = readFileSync(file, "utf-8");
+    return JSON.parse(content);
+  });
+
+  return json({ blogPosts, projects });
 }
