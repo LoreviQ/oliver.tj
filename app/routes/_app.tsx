@@ -48,7 +48,8 @@ export const loader: LoaderFunction = async () => {
                         ...projectData,
                         slug: filename.replace(".json", ""),
                         description: linkedPost.excerpt,
-                        tags: linkedPost.tags
+                        tags: linkedPost.tags,
+                        date: linkedPost.date
                     };
                 }
             }
@@ -57,7 +58,8 @@ export const loader: LoaderFunction = async () => {
                 ...projectData,
                 slug: filename.replace(".json", "")
             };
-        });
+        })
+        .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
     return Response.json({ posts, projects });
 };

@@ -6,4 +6,5 @@ export interface Project {
     blogPost?: string;
     description?: string;
     tags?: string[];
+    date?: string;
 } 
