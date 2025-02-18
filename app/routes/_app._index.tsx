@@ -11,9 +11,6 @@ export const meta: MetaFunction = () => {
 
 export default function ThemeDemo() {
     return (
-        <div className="min-h-screen bg-theme-bg">
-            {/* Hero Section */}
-            <Hero />
-        </div>
+        <Hero />
     )
 } 

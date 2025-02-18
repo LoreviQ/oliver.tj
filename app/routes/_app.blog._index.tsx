@@ -6,7 +6,7 @@ import matter from "gray-matter";
 
 import type { BlogPost } from "~/types/blog";
 import { BlogSnippet } from "~/components/BlogSnippet";
-import { HeadingHero } from "~/components/style";
+import { FixedWidthHero } from "~/components/style";
 export const loader: LoaderFunction = async () => {
     const postsPath = path.join(process.cwd(), "app", "content", "blog");
     const posts = fs.readdirSync(postsPath)
@@ -34,11 +34,11 @@ export default function BlogIndex() {
 
     return (
         <>
-            <HeadingHero
+            <FixedWidthHero
                 prefixText="My"
                 emphasisText="Blog"
             />
-            <div className="space-y-8">
+            <div className="space-y-8 mt-6">
                 {posts.map(post => (
                     <BlogSnippet key={post.slug} post={post} />
                 ))}

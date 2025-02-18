@@ -6,7 +6,7 @@ import matter from "gray-matter";
 
 import type { Project } from "~/types/project";
 import { ProjectCard } from "~/components/ProjectCard";
-import { HeadingHero } from "~/components/style";
+import { FixedWidthHero } from "~/components/style";
 
 export const loader: LoaderFunction = async () => {
     const projectsPath = path.join(process.cwd(), "app", "content", "project");
@@ -51,11 +51,11 @@ export default function ProjectIndex() {
 
     return (
         <>
-            <HeadingHero
+            <FixedWidthHero
                 prefixText="My"
                 emphasisText="Projects"
             />
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
                 {projects.map(project => (
                     <ProjectCard
                         key={project.slug}
