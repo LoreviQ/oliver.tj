@@ -38,7 +38,7 @@ export default function BlogIndex() {
                 prefixText="My"
                 emphasisText="Blog"
             />
-            <div className="space-y-8 mt-6">
+            <div className="space-y-8">
                 {posts.map(post => (
                     <BlogSnippet key={post.slug} post={post} />
                 ))}
