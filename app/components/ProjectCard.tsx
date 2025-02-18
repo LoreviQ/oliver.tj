@@ -29,7 +29,7 @@ export function ProjectCard({ project, blogData }: ProjectCardProps) {
                         <img
                             src={project.logo || "/images/default.png"}
                             alt={`${project.name} logo`}
-                            className="w-full h-full object-cover object-center"
+                            className="w-full h-full object-contain object-center"
                             onError={handleImageError}
                         />
                     </div>
