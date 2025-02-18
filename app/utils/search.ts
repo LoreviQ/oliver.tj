@@ -87,28 +87,20 @@ function searchProjects(projects: Project[], query: string): SearchResult[] {
 
     for (const project of projects) {
         let score = 0;
-        let matchText = '';
 
         // Name match
         if (project.name.toLowerCase().includes(q)) {
             score += 100;
-            matchText = highlightMatch(project.name, query);
         }
 
         // URL match
         if (project.url.toLowerCase().includes(q)) {
             score += 25;
-            if (!matchText) {
-                matchText = highlightMatch(project.url, query);
-            }
         }
 
         // Description match (if available)
         if (project.description?.toLowerCase().includes(q)) {
             score += 15;
-            if (!matchText) {
-                matchText = highlightMatch(project.description, query);
-            }
         }
 
         if (score > 0) {
@@ -116,7 +108,7 @@ function searchProjects(projects: Project[], query: string): SearchResult[] {
                 type: 'project',
                 title: project.name,
                 url: project.url,
-                matchText,
+                matchText: project.url,
                 score,
             });
         }
