@@ -4,8 +4,7 @@ import { FixedWidthHero } from "~/components/style";
 
 export const meta: MetaFunction = () => {
     return [
-        { title: "CV - Oliver Jay" },
-        { name: "description", content: "Oliver Jay's CV - Software Developer" },
+        { title: "My CV" },
     ];
 };
 
