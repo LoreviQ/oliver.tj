@@ -4,6 +4,6 @@ export interface Project {
     logo: string;
     url: string;
     blogPost?: string;
-    description: string;
-    tags: string[];
+    description?: string;
+    tags?: string[];
 } 

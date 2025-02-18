@@ -1,54 +1,11 @@
-import { type LoaderFunction } from "@remix-run/node";
-import { Link, useLoaderData } from "@remix-run/react";
-import path from "path";
-import fs from "fs";
-import matter from "gray-matter";
+import { Link, useOutletContext } from "@remix-run/react";
 
 import type { Project } from "~/types/project";
 import { FixedWidthHero } from "~/components/style";
 import { InfoCircleIcon } from "~/components/icons";
 
-
-export const loader: LoaderFunction = async () => {
-    const projectsPath = path.join(process.cwd(), "app", "content", "project");
-    const projects = fs.readdirSync(projectsPath)
-        .filter(filename => filename.endsWith(".json"))
-        .map(filename => {
-            const filePath = path.join(projectsPath, filename);
-            const fileContent = fs.readFileSync(filePath, "utf-8");
-            const projectData = JSON.parse(fileContent);
-            let blogData = undefined;
-
-            // If there's a linked blog post, get its metadata
-            if (projectData.blogPost) {
-                const blogPath = path.join(process.cwd(), "app", "content", "blog", `${projectData.blogPost}.md`);
-                try {
-                    const blogContent = fs.readFileSync(blogPath, "utf-8");
-                    const { data } = matter(blogContent);
-                    blogData = {
-                        date: data.date,
-                        tags: data.tags,
-                        excerpt: data.excerpt
-                    };
-                } catch (error) {
-                    console.warn(`Blog post ${projectData.blogPost} not found for project ${filename}`);
-                }
-            }
-
-            return {
-                ...projectData,
-                slug: filename.replace(".json", ""),
-                blogData
-            };
-        });
-
-    return Response.json({ projects });
-};
-
 export default function ProjectIndex() {
-    const { projects } = useLoaderData<{
-        projects: (Project & { blogData?: { date: string; tags: string[]; excerpt?: string } })[]
-    }>();
+    const { projects } = useOutletContext<{ projects: Project[] }>();
 
     return (
         <>
@@ -61,7 +18,6 @@ export default function ProjectIndex() {
                     <ProjectCard
                         key={project.slug}
                         project={project}
-                        blogData={project.blogData}
                     />
                 ))}
             </div>
@@ -71,13 +27,8 @@ export default function ProjectIndex() {
 
 interface ProjectCardProps {
     project: Project;
-    blogData?: {
-        date: string;
-        tags: string[];
-        excerpt?: string;
-    };
 }
-function ProjectCard({ project, blogData }: ProjectCardProps) {
+function ProjectCard({ project }: ProjectCardProps) {
     const handleImageError = (e: React.SyntheticEvent<HTMLImageElement>) => {
         e.currentTarget.src = "/images/default.png";
     };
@@ -123,24 +74,15 @@ function ProjectCard({ project, blogData }: ProjectCardProps) {
                     )}
                 </div>
             </div>
-            {blogData && (
-                <>
-                    <div className="text-sm text-theme-text-muted">
-                        {new Date(blogData.date).toLocaleDateString('en-US', {
-                            month: 'long',
-                            day: 'numeric',
-                            year: 'numeric'
-                        })}
-                    </div>
-                    <div className="text-sm text-theme-text-muted">
-                        {blogData.tags.join(", ")}
-                    </div>
-                    {blogData.excerpt && (
-                        <p className="text-theme-text-secondary mt-4 line-clamp-3">
-                            {blogData.excerpt}
-                        </p>
-                    )}
-                </>
+            {project.tags && (
+                <div className="text-sm text-theme-text-muted">
+                    {project.tags.join(", ")}
+                </div>
+            )}
+            {project.description && (
+                <p className="text-theme-text-secondary mt-4 line-clamp-3">
+                    {project.description}
+                </p>
             )}
         </div>
     );
