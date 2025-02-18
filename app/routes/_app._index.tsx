@@ -1,14 +1,20 @@
-import type { MetaFunction } from "@remix-run/node";
+import type { LoaderFunction, MetaFunction } from "@remix-run/node";
 import { Link, useOutletContext } from "@remix-run/react";
 import { Hero } from "~/components/style";
 import { ProjectCard, BlogCard } from "~/components/cards";
 import type { Project } from "~/types/project";
 import type { BlogPost } from "~/types/blog";
+import { loadConfig } from "~/utils/config-parser";
 
-export const meta: MetaFunction = () => {
+export const loader: LoaderFunction = async () => {
+    const config = loadConfig();
+    return { config };
+};
+
+export const meta: MetaFunction<typeof loader> = ({ data }) => {
     return [
-        { title: "Oliver Jay" },
-        { name: "description", content: "Personal website and portfolio" },
+        { title: data?.config?.SITE_TITLE || "Your Name" },
+        { name: "description", content: data?.config?.SITE_DESCRIPTION || "Personal website and portfolio" },
     ];
 };
 
