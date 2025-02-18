@@ -6,6 +6,7 @@ import matter from "gray-matter";
 
 import type { Project } from "~/types/project";
 import { ProjectCard } from "~/components/ProjectCard";
+import { HeadingHero } from "~/components/style";
 
 export const loader: LoaderFunction = async () => {
     const projectsPath = path.join(process.cwd(), "app", "content", "project");
@@ -50,14 +51,10 @@ export default function ProjectIndex() {
 
     return (
         <>
-            <section className="relative overflow-hidden py-section mb-6">
-                <div className="absolute inset-0 bg-radial from-theme-accent-dark from-20% to-theme-bg to-70% opacity-10 animate-gradient"></div>
-                <div className="container mx-auto px-4">
-                    <h1 className="font-display text-6xl font-bold text-theme-text text-center">
-                        My <span className="text-theme-primary">Projects</span>
-                    </h1>
-                </div>
-            </section>
+            <HeadingHero
+                prefixText="My"
+                emphasisText="Projects"
+            />
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {projects.map(project => (
                     <ProjectCard

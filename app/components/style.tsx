@@ -15,3 +15,22 @@ export function Hero() {
         </section>
     )
 }
+
+interface HeadingHeroProps {
+    prefixText?: string;
+    emphasisText?: string;
+    suffixText?: string;
+}
+
+export function HeadingHero({ prefixText, emphasisText, suffixText }: HeadingHeroProps) {
+    return (
+        <section className="relative overflow-hidden py-section mb-6">
+            <div className="absolute inset-0 bg-radial from-theme-accent-dark from-20% to-theme-bg to-70% opacity-10 animate-gradient"></div>
+            <div className="container mx-auto px-4">
+                <h1 className="font-display text-6xl font-bold text-theme-text text-center">
+                    {prefixText} <span className="text-theme-primary">{emphasisText}</span> {suffixText}
+                </h1>
+            </div>
+        </section>
+    )
+}
