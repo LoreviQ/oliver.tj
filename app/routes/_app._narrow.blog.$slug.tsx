@@ -22,7 +22,7 @@ export default function BlogPost() {
 
     return (
         <>
-            <header className="mb-8">
+            <header className="my-8">
                 <div className="flex gap-4">
                     <div className="flex items-center">
                         <Link
