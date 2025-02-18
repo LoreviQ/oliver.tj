@@ -13,7 +13,7 @@ interface HeaderProps {
 export function Header({ posts, projects }: HeaderProps) {
     return (
         <header className="bg-theme-bg-secondary backdrop-blur-xs border-b border-theme-bg-border sticky top-0 z-50">
-            <div className="grid grid-cols-10 items-center h-16 px-8 w-full max-w-7xl mx-auto">
+            <div className="grid grid-cols-15 items-center h-16 px-8 w-full max-w-7xl mx-auto">
                 <ProfileSection />
                 <SearchBar posts={posts} projects={projects} />
                 <Navigation />
@@ -24,7 +24,7 @@ export function Header({ posts, projects }: HeaderProps) {
 
 function ProfileSection() {
     return (
-        <div className="flex items-center space-x-3 col-span-2 group">
+        <>
             <Link
                 to="/"
                 className="flex items-center space-x-3 col-span-2 group"
@@ -41,7 +41,13 @@ function ProfileSection() {
                     </span>
                 </div>
             </Link>
-        </div>
+            <Link
+                to="/cv"
+                className="col-span-1 text-theme-text-secondary hover:text-theme-accent transition-colors flex items-center justify-center font-bold"
+            >
+                CV
+            </Link>
+        </>
     );
 }
 
@@ -73,7 +79,7 @@ function SearchBar({ posts, projects }: SearchBarProps) {
     };
 
     return (
-        <div className="col-span-6 px-4" ref={searchRef}>
+        <div className="col-span-9 px-4" ref={searchRef}>
             <div className="relative">
                 <input
                     type="text"
@@ -101,7 +107,7 @@ function SearchBar({ posts, projects }: SearchBarProps) {
 
 function Navigation() {
     return (
-        <nav className="flex items-center justify-end space-x-6 col-span-2">
+        <nav className="flex items-center justify-end space-x-6 col-span-3">
             <Link
                 to="/blog"
                 className="text-theme-text-secondary hover:text-theme-primary transition-colors"
