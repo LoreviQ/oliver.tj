@@ -30,7 +30,7 @@ function ProfileSection() {
                 className="flex items-center space-x-3 col-span-2 group"
             >
                 <div className="w-10 h-10 rounded-lg bg-theme-primary/10 flex items-center justify-center overflow-hidden border bborder-theme-bg-border group-hover:border-theme-primary/40 transition-colors">
-                    <img src="/images/avatar-icon.png" alt="Oliver Jay" className="w-full h-full object-cover" />
+                    <img src="/images/avatar-icon.webp" alt="Oliver Jay" className="w-full h-full object-cover" />
                 </div>
                 <div className="flex flex-col">
                     <span className="text-theme-text font-display font-bold group-hover:text-theme-primary transition-colors">

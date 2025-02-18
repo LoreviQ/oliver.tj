@@ -30,7 +30,7 @@ interface ProjectCardProps {
 
 export function ProjectCard({ project }: ProjectCardProps) {
     const handleImageError = (e: React.SyntheticEvent<HTMLImageElement>) => {
-        e.currentTarget.src = "/images/default.png";
+        e.currentTarget.src = "/images/default.webp";
     };
 
     return (
@@ -44,7 +44,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
                 >
                     <div className="aspect-video mb-4 overflow-hidden rounded-lg">
                         <img
-                            src={project.logo || "/images/default.png"}
+                            src={project.logo || "/images/default.webp"}
                             alt={`${project.name} logo`}
                             className="w-full h-full object-contain object-center"
                             onError={handleImageError}

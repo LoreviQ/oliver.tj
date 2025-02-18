@@ -1,6 +1,6 @@
 {
     "name": "IDentify",
-    "logo": "/images/projects/identify.png",
+    "logo": "/images/projects/identify.webp",
     "url": "https://identify-solana.streamlit.app/",
     "blogPost": "IdentifyHackathonWinner"
 }
