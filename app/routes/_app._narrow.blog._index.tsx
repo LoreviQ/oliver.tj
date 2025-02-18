@@ -1,4 +1,3 @@
-
 import { Link, useOutletContext } from "@remix-run/react";
 
 import type { BlogPost } from "~/types/blog";
