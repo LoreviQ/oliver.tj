@@ -47,9 +47,10 @@ export function SearchResults({ query, results, onClose }: SearchResultsProps) {
                                     </span>
                                 </div>
                                 {result.matchText && (
-                                    <p className="text-sm text-theme-text-muted mt-1">
-                                        {result.matchText}
-                                    </p>
+                                    <p
+                                        className="text-sm text-theme-text-muted mt-1"
+                                        dangerouslySetInnerHTML={{ __html: result.matchText }}
+                                    />
                                 )}
                             </Link>
                         </li>

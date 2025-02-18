@@ -70,7 +70,7 @@ export default function App() {
 
     return (
         <div className="min-h-screen bg-linear-to-b from-theme-bg to-theme-bg-secondary text-white">
-            <Header />
+            <Header posts={posts} projects={projects} />
             <div className="mx-auto">
                 <Outlet context={{ posts, projects }} />
             </div>

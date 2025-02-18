@@ -1,12 +1,21 @@
 import { Link } from "@remix-run/react";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
+import { useState, useRef, useEffect } from "react";
+import type { BlogPost } from "~/types/blog";
+import type { Project } from "~/types/project";
+import { search } from "~/utils/search";
+import { SearchResults } from "./search-results";
 
-export function Header() {
+interface HeaderProps {
+    posts: BlogPost[];
+    projects: Project[];
+}
+export function Header({ posts, projects }: HeaderProps) {
     return (
         <header className="bg-theme-bg-secondary backdrop-blur-xs border-b border-theme-bg-border sticky top-0 z-50">
             <div className="grid grid-cols-10 items-center h-16 px-8 w-full max-w-7xl mx-auto">
                 <ProfileSection />
-                <SearchBar />
+                <SearchBar posts={posts} projects={projects} />
                 <Navigation />
             </div>
         </header>
@@ -34,19 +43,55 @@ function ProfileSection() {
     );
 }
 
-function SearchBar() {
+interface SearchBarProps {
+    posts: BlogPost[];
+    projects: Project[];
+}
+function SearchBar({ posts, projects }: SearchBarProps) {
+    const [query, setQuery] = useState("");
+    const [isOpen, setIsOpen] = useState(false);
+    const searchRef = useRef<HTMLDivElement>(null);
+
+    const results = search(query, posts, projects);
+
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
+                setIsOpen(false);
+            }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => document.removeEventListener('mousedown', handleClickOutside);
+    }, []);
+
+    const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setQuery(e.target.value);
+        setIsOpen(true);
+    };
+
     return (
-        <div className="col-span-6 px-4">
+        <div className="col-span-6 px-4" ref={searchRef}>
             <div className="relative">
                 <input
                     type="text"
                     placeholder="Search..."
+                    value={query}
+                    onChange={handleSearch}
                     className="w-full bg-theme-bg/50 border border-theme-bg-border focus:border-theme-primary rounded-lg px-4 py-2 pl-10
                              text-theme-text placeholder:text-theme-text-muted
                              focus:outline-hidden focus:ring-2 focus:ring-theme-primary/20
                              transition-all duration-200"
                 />
                 <MagnifyingGlassIcon className="w-5 h-5 text-theme-text-muted absolute left-3 top-1/2 transform -translate-y-1/2" />
+
+                {isOpen && (
+                    <SearchResults
+                        query={query}
+                        results={results}
+                        onClose={() => setIsOpen(false)}
+                    />
+                )}
             </div>
         </div>
     );
