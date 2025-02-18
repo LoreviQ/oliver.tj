@@ -9,12 +9,13 @@ import { SearchResults } from "./search-results";
 interface HeaderProps {
     posts: BlogPost[];
     projects: Project[];
+    config: Record<string, string>;
 }
-export function Header({ posts, projects }: HeaderProps) {
+export function Header({ posts, projects, config }: HeaderProps) {
     return (
         <header className="bg-theme-bg-secondary backdrop-blur-xs border-b border-theme-bg-border sticky top-0 z-50">
             <div className="grid grid-cols-15 items-center h-16 px-8 w-full max-w-7xl mx-auto">
-                <ProfileSection />
+                <ProfileSection config={config} />
                 <SearchBar posts={posts} projects={projects} />
                 <Navigation />
             </div>
@@ -22,7 +23,7 @@ export function Header({ posts, projects }: HeaderProps) {
     );
 }
 
-function ProfileSection() {
+function ProfileSection({ config }: { config: Record<string, string> }) {
     return (
         <>
             <Link
@@ -34,10 +35,10 @@ function ProfileSection() {
                 </div>
                 <div className="flex flex-col">
                     <span className="text-theme-text font-display font-bold group-hover:text-theme-primary transition-colors">
-                        Oliver Jay
+                        {config.NAME}
                     </span>
                     <span className="text-theme-text-muted text-sm">
-                        @oliver.tj
+                        @{config.DOMAIN}
                     </span>
                 </div>
             </Link>

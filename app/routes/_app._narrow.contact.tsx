@@ -1,4 +1,5 @@
 import type { MetaFunction } from "@remix-run/node";
+import { useOutletContext } from "@remix-run/react";
 
 import { FixedWidthHero } from "~/components/style";
 
@@ -7,6 +8,7 @@ export const meta: MetaFunction = () => {
 };
 
 export default function Contact() {
+    const { config } = useOutletContext<{ config: Record<string, string> }>();
     return (
         <>
             <FixedWidthHero
@@ -19,21 +21,21 @@ export default function Contact() {
                     <ContactCard
                         icon="📧"
                         title="Email"
-                        href="mailto:oliver.tj@olvier.tj"
-                        description="oliver.tj@olvier.tj"
+                        href={`mailto:${config.EMAIL}`}
+                        description={config.EMAIL}
                     />
 
                     <ContactCard
                         icon="💻"
                         title="GitHub"
-                        href="https://github.com/LoreviQ"
+                        href={`https://github.com/${config.GITHUB}`}
                         description="Follow my open source contributions"
                     />
 
                     <ContactCard
                         icon="💼"
                         title="LinkedIn"
-                        href="https://www.linkedin.com/in/oliver-tj-/"
+                        href={`https://www.linkedin.com/in/${config.LINKEDIN}`}
                         description="Connect with me professionally"
                     />
                 </div>

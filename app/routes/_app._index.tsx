@@ -13,14 +13,14 @@ export const meta: MetaFunction = () => {
 };
 
 export default function Index() {
-    const { projects, posts } = useOutletContext<{ projects: Project[], posts: BlogPost[] }>();
+    const { projects, posts, config } = useOutletContext<{ projects: Project[], posts: BlogPost[], config: Record<string, string> }>();
 
     const recentProjects = projects.slice(0, 3);
     const recentPosts = posts.slice(0, 3);
 
     return (
         <div>
-            <Hero />
+            <Hero config={config} />
             <div className="mx-auto px-4 max-w-6xl space-y-16 pb-8">
                 <section>
                     <div className="flex justify-between items-center mb-8">
