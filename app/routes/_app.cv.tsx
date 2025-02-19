@@ -212,34 +212,36 @@ export default function CV() {
                 </section>
 
                 {/* Interests and Achievements */}
-                <section className="bg-theme-bg-card rounded-lg p-8 shadow-sm">
+                <section>
                     <h2 className="font-display text-3xl font-bold text-theme-text mb-6 flex items-center">
                         <span className="mr-3">🏆</span>Interests and Achievements
                     </h2>
-                    <div className="text-theme-text-light space-y-6">
-                        <p className="leading-relaxed">
-                            Particularly interested in machine learning, I performed my final year project on analysis of machine learning
-                            algorithms and achieved the highest grade. Interests in a wide range of technologies, from AI, cloud computing,
-                            different operating systems, networking and encryption.
-                        </p>
-                        <ul className="space-y-3">
-                            <li className="flex items-start">
-                                <span className="text-theme-primary mr-3">•</span>
-                                <span>Won first place on the Solana Zeus Bounty at Taipei Blockchain Week 2024 Hackathon (8888 $ZEUS)</span>
-                            </li>
-                            <li className="flex items-start">
-                                <span className="text-theme-primary mr-3">•</span>
-                                <span>Won second place at the Web3 AI London Hackathon (500 $USDC)</span>
-                            </li>
-                            <li className="flex items-start">
-                                <span className="text-theme-primary mr-3">•</span>
-                                <span>Achieved Chief Scout's Gold Award</span>
-                            </li>
-                            <li className="flex items-start">
-                                <span className="text-theme-primary mr-3">•</span>
-                                <span>Achieved UK Maths Challenge Gold Award - Best in School</span>
-                            </li>
-                        </ul>
+                    <div className="bg-theme-bg-card rounded-lg p-8 shadow-sm">
+                        <div className="text-theme-text-light space-y-6">
+                            <p className="leading-relaxed">
+                                Particularly interested in machine learning, I performed my final year project on analysis of machine learning
+                                algorithms and achieved the highest grade. Interests in a wide range of technologies, from AI, cloud computing,
+                                different operating systems, networking and encryption.
+                            </p>
+                            <ul className="space-y-3">
+                                <li className="flex items-start">
+                                    <span className="text-theme-primary mr-3">•</span>
+                                    <span>Won first place on the Solana Zeus Bounty at Taipei Blockchain Week 2024 Hackathon (8888 $ZEUS)</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <span className="text-theme-primary mr-3">•</span>
+                                    <span>Won second place at the Web3 AI London Hackathon (500 $USDC)</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <span className="text-theme-primary mr-3">•</span>
+                                    <span>Achieved Chief Scout's Gold Award</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <span className="text-theme-primary mr-3">•</span>
+                                    <span>Achieved UK Maths Challenge Gold Award - Best in School</span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </section>
             </div>
