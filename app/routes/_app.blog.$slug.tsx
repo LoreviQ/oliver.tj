@@ -21,7 +21,7 @@ export default function BlogPost() {
     }
 
     return (
-        <>
+        <div className="mx-auto px-4 max-w-6xl">
             <header className="my-8">
                 <div className="flex gap-4">
                     <div className="flex items-center">
@@ -47,6 +47,6 @@ export default function BlogPost() {
                     dangerouslySetInnerHTML={{ __html: post.content }}
                 />
             </article>
-        </>
+        </div>
     );
 } 

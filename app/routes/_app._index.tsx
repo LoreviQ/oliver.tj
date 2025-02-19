@@ -26,7 +26,11 @@ export default function Index() {
 
     return (
         <div>
-            <Hero config={config} />
+            <Hero prefixText="I am" emphasisText={config.NAME} subheading={
+                <>
+                    This is my personal site, <Link to="/cv" className="text-theme-primary">Online CV</Link>, <Link to="/blog" className="text-theme-primary">Blog</Link> and <Link to="/projects" className="text-theme-primary">Projects</Link>
+                </>
+            } />
             <div className="mx-auto px-4 max-w-6xl space-y-16 pb-8">
                 <section>
                     <div className="flex justify-between items-center mb-8">

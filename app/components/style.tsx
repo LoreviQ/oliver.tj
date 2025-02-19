@@ -1,31 +1,30 @@
-import { Link } from "@remix-run/react";
+import { ReactNode } from "react";
 
-export function Hero({ config }: { config: Record<string, string> }) {
+
+interface HeroProps {
+    prefixText?: string;
+    emphasisText?: string;
+    suffixText?: string;
+    subheading?: ReactNode;
+}
+export function Hero({ prefixText, emphasisText, suffixText, subheading }: HeroProps) {
     return (
         <section className="relative overflow-hidden py-section">
             <div className="absolute inset-0 bg-linear-to-b from-theme-primary-dark via-theme-accent-dark to-theme-bg opacity-10"></div>
             <div className="container mx-auto px-4 relative z-10">
                 <div className="text-center">
                     <h1 className="font-display text-6xl font-bold text-theme-text mb-6">
-                        I am <span className="text-theme-primary">{config.NAME}</span>
+                        {prefixText} <span className="text-theme-primary">{emphasisText}</span> {suffixText}
                     </h1>
                     <p className="text-theme-text-secondary text-xl max-w-2xl mx-auto mb-8">
-                        This is my personal site, <Link to="/cv" className="text-theme-primary hover:text-theme-primary-hover transition-colors">Online CV</Link>, <Link to="/blog" className="text-theme-primary hover:text-theme-primary-hover transition-colors">Blog</Link> and <Link to="/projects" className="text-theme-primary hover:text-theme-primary-hover transition-colors">Projects</Link>
+                        {subheading}
                     </p>
                 </div>
             </div>
         </section>
     )
 }
-
-interface FixedWidthHeroProps {
-    prefixText?: string;
-    emphasisText?: string;
-    suffixText?: string;
-    subheading?: string;
-}
-
-export function FixedWidthHero({ prefixText, emphasisText, suffixText, subheading }: FixedWidthHeroProps) {
+export function FixedWidthHero({ prefixText, emphasisText, suffixText, subheading }: HeroProps) {
     return (
         <section className="relative overflow-hidden py-section my-4">
             <div className="absolute inset-0 bg-radial from-theme-accent-dark from-20% to-theme-bg to-70% opacity-10 animate-gradient"></div>
