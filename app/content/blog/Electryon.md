@@ -5,7 +5,7 @@ tags: [solana, rust, web3, hackathon]
 excerpt: How we built a Solana-based investment game that won first place at Taipei Blockchain Week 2024
 ---
 
-Ever wondered what would happen if you combined the classic game of Monopoly with real-world business investments? That's exactly what we did with Electryon, a gamified investment platform that recently won first place at Taipei Blockchain Week 2024's hackathon, earning us 4444 $ZEUS (approximately £2000)!
+Ever wondered what would happen if you combined the classic game of Monopoly with real-world business investments? That's exactly what we did with Electryon, a gamified investment platform that recently won first place on the Solana Zeus Bounty at Taipei Blockchain Week 2024's hackathon, earning us 8888 $ZEUS (approximately £4000)!
 
 ## The Vision
 
@@ -59,7 +59,7 @@ The project is split into two main components:
 
 During Taipei Blockchain Week 2024, our team worked intensively to bring Electryon to life. The challenge was to create something that would make investing more accessible and engaging while providing real value to local businesses.
 
-Our efforts paid off when we were awarded first place, receiving 4444 $ZEUS tokens. The judges were particularly impressed with:
+Our efforts paid off when we were awarded first place, receiving 8888 $ZEUS tokens. The judges were particularly impressed with:
 - The innovative combination of gaming and investment
 - Real-world business integration
 - Technical implementation on Solana
@@ -70,7 +70,7 @@ Our efforts paid off when we were awarded first place, receiving 4444 $ZEUS toke
 Want to experience Electryon? You can:
 - [Play the Demo](https://electryon-six.vercel.app/)
 - [Check out the Code](https://github.com/LoreviQ/electryon)
-- [Learn More About the Hackathon](https://taipeiblockchainweek.com)
+- [Learn More About the Hackathon](https://earn.superteam.fun/listing/virtual-hackathon-bonus-bounty-tbw-2024/)
 
 ## What's Next?
 
