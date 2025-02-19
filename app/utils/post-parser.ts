@@ -20,7 +20,8 @@ export function loadBlogPosts(): BlogPost[] {
                 date: data.date,
                 tags: data.tags,
                 excerpt: data.excerpt || "",
-                content: htmlContent
+                content: htmlContent,
+                links: data.links || []
             };
         })
         .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());

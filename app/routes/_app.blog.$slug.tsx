@@ -1,4 +1,3 @@
-
 import { type LoaderFunction } from "@remix-run/node";
 import { Link, useOutletContext, useLoaderData } from "@remix-run/react";
 
@@ -22,7 +21,7 @@ export default function BlogPost() {
 
     return (
         <div className="mx-auto px-4 max-w-6xl">
-            <header className="my-8">
+            <header className="mt-8 mb-4">
                 <div className="flex gap-4">
                     <div className="flex items-center">
                         <Link
@@ -41,6 +40,23 @@ export default function BlogPost() {
                     </div>
                 </div>
             </header>
+
+            {post.links && post.links.length > 0 && (
+                <div className="my-4 mx-8 flex flex-wrap gap-2">
+                    {post.links.map((link, index) => (
+                        <a
+                            key={index}
+                            href={link.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="bg-theme-bg-card text-theme-text-muted hover:bg-theme-primary hover:text-white transition-colors rounded-full px-4 py-2 shadow-sm"
+                        >
+                            {link.name}
+                        </a>
+                    ))}
+                </div>
+            )}
+
             <article className="bg-theme-bg-card rounded-card p-8 shadow-card">
                 <div
                     className="prose prose-invert prose-headings:font-display prose-headings:text-theme-text prose-p:text-theme-text-secondary max-w-none"
