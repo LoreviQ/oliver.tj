@@ -17,10 +17,11 @@ export default function CV() {
                 {/* Introduction */}
                 <section className="bg-theme-bg-card rounded-lg p-8 shadow-sm">
                     <p className="text-theme-text-light leading-relaxed">
-                        I'm a highly skilled and accomplished Computer Science graduate with experience in data analysis and software development,
-                        as well as proficiency in programming languages such as JavaScript, Go, and Python. Possess strong problem-solving and
-                        team working abilities, with exceptional presentation skills. Passionate about machine learning and interested in a range
-                        of technologies, including AI, cloud computing, and encryption.
+                        I'm a highly skilled full-stack developer and Computer Science graduate with expertise in modern web technologies,
+                        blockchain development, and system architecture. I've successfully delivered multiple production applications,
+                        including an award-winning Web3 project and various open-source tools. Proficient in TypeScript, Go and Python,
+                        with experience in both frontend and backend development. Passionate about creating intuitive user experiences and
+                        implementing complex technical solutions.
                     </p>
                 </section>
 
@@ -44,19 +45,23 @@ export default function CV() {
                             <ul className="list-none text-theme-text-light space-y-3">
                                 <li className="flex items-start">
                                     <span className="text-theme-primary mr-3">•</span>
-                                    <span>Took a sabbatical to travel and see the world while still young, gaining a broader perspective on global cultures</span>
+                                    <span>Took a gap year to travel and see the world, gaining a broader perspective on global cultures</span>
                                 </li>
                                 <li className="flex items-start">
                                     <span className="text-theme-primary mr-3">•</span>
-                                    <span>Focused on self-directed learning and development in software development and programming, with a particular emphasis on Golang, Crypto and full-stack development</span>
+                                    <span>Focused on self-directed learning and development in software development and programming, with a particular emphasis on emerging technolgogies such as AI and Crypto</span>
                                 </li>
                                 <li className="flex items-start">
                                     <span className="text-theme-primary mr-3">•</span>
-                                    <span>Completed personal projects such as WebNovelClient, a full stack project explained in this blog post</span>
+                                    <span>Participated in several hackathons, in which I won multiple prizes for my projects</span>
                                 </li>
                                 <li className="flex items-start">
                                     <span className="text-theme-primary mr-3">•</span>
-                                    <span>Used the time to deepen my expertise in technologies such as, Golang, React and CI/CD aligning my skills with my long-term career goals in software development</span>
+                                    <span>Completed personal projects such as SketchSlides, a modern responsive slideshow PWA, and WebNovelClient, a full stack project for sharing user uploaded novels</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <span className="text-theme-primary mr-3">•</span>
+                                    <span>Used the time to deepen my expertise in technologies such as Golang, React and CI/CD aligning my skills with my long-term career goals in software development</span>
                                 </li>
                             </ul>
                         </div>
@@ -145,6 +150,10 @@ export default function CV() {
                             <ul className="space-y-3">
                                 <li className="flex items-start">
                                     <span className="text-theme-primary mr-3">•</span>
+                                    <span className="text-theme-text-light">TypeScript: Used extensively in personal projects</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <span className="text-theme-primary mr-3">•</span>
                                     <span className="text-theme-text-light">JavaScript: Primary programming language used at The Curve Group</span>
                                 </li>
                                 <li className="flex items-start">
@@ -153,7 +162,7 @@ export default function CV() {
                                 </li>
                                 <li className="flex items-start">
                                     <span className="text-theme-primary mr-3">•</span>
-                                    <span className="text-theme-text-light">Java and C: Applied to various programming projects during university studies</span>
+                                    <span className="text-theme-text-light">Rust: Used for smart contract development on the Solana blockchain</span>
                                 </li>
                                 <li className="flex items-start">
                                     <span className="text-theme-primary mr-3">•</span>
@@ -161,7 +170,7 @@ export default function CV() {
                                 </li>
                                 <li className="flex items-start">
                                     <span className="text-theme-primary mr-3">•</span>
-                                    <span className="text-theme-text-light">React: Developed modern frontends with dynamic user interfaces</span>
+                                    <span className="text-theme-text-light">React: Developed modern frontends with dynamic user interfaces, particularly with Remix</span>
                                 </li>
                             </ul>
                         </div>
@@ -195,7 +204,7 @@ export default function CV() {
                                 </li>
                                 <li className="flex items-start">
                                     <span className="text-theme-primary mr-3">•</span>
-                                    <span className="text-theme-text-light">Teamwork: Experienced in collaborative project management</span>
+                                    <span className="text-theme-text-light">Teamwork: Collaborated effectively in small teams during hackathons and project development</span>
                                 </li>
                             </ul>
                         </div>
@@ -214,6 +223,14 @@ export default function CV() {
                             different operating systems, networking and encryption.
                         </p>
                         <ul className="space-y-3">
+                            <li className="flex items-start">
+                                <span className="text-theme-primary mr-3">•</span>
+                                <span>Won first place on the Solana Zeus Bounty at Taipei Blockchain Week 2024 Hackathon (8888 $ZEUS)</span>
+                            </li>
+                            <li className="flex items-start">
+                                <span className="text-theme-primary mr-3">•</span>
+                                <span>Won second place at the Web3 AI London Hackathon (500 $USDC)</span>
+                            </li>
                             <li className="flex items-start">
                                 <span className="text-theme-primary mr-3">•</span>
                                 <span>Achieved Chief Scout's Gold Award</span>
