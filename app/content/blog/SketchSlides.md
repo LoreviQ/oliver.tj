@@ -6,7 +6,7 @@ excerpt: I built SketchSlides as a free, open-source drawing practice tool. It's
 links:
   - name: Deployment
     url: https://sketchslides.oliver.tj
-  - name: Source Code
+  - name: GitHub
     url: https://github.com/LoreviQ/SketchSlides
 --- 
 Recently, I've been learning to draw, and one of the fundamental practices in learning figure drawing is doing quick sketches from reference images. The concept is simple: look at an image for a short time - often starting with just 30 seconds - and try to capture the essence of the pose. This trains your brain to quickly identify the core elements of a figure and helps develop the muscle memory needed for confident strokes.

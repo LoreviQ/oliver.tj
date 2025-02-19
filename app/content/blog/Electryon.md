@@ -3,6 +3,13 @@ title: "Building Electryon: Where Monopoly Meets Web3"
 date: 2025-01-14
 tags: [solana, rust, web3, hackathon]
 excerpt: How we built a Solana-based investment game that won first place at Taipei Blockchain Week 2024
+links:
+  - name: GitHub
+    url: https://github.com/LoreviQ/electryon
+  - name: Live Demo
+    url: https://electryon-six.vercel.app/
+  - name: Hackathon
+    url: https://earn.superteam.fun/listing/virtual-hackathon-bonus-bounty-tbw-2024/
 ---
 
 Ever wondered what would happen if you combined the classic game of Monopoly with real-world business investments? That's exactly what we did with Electryon, a gamified investment platform that recently won first place on the Solana Zeus Bounty at Taipei Blockchain Week 2024's hackathon, earning us 8888 $ZEUS (approximately £4000)!
