@@ -14,8 +14,22 @@ I'm a highly skilled full-stack developer and Computer Science graduate with exp
 
 ### 💼 Employment History
 
+#### Soft Pauer
+**2025 - Current Day**
+
+**Full Stack Software Engineer**
+
+Full-stack software engineer specialising in AI-powered enterprise applications and cloud infrastructure. Lead end-to-end product development from initial concept through production deployment, with expertise in:
+
+- **AI & Machine Learning Integration**: Designed and implemented conversational AI systems with advanced language models, function calling, and performance optimisation strategies
+- **Backend Architecture**: Built scalable APIs with modular agentic structure, comprehensive type safety, and enterprise-grade reliability patterns
+- **Cloud Infrastructure & DevOps**: Configured Azure cloud resources, established CI/CD pipelines, containerisation, and automated testing frameworks
+- **Database & Performance Engineering**: Designed complex data models, implemented multi-layer caching strategies, and optimized system performance for production workloads
+
+Responsible for transforming business requirements into robust, scalable technical solutions while maintaining high code quality standards and security best practices.
+
 #### Unemployed
-**2023 - Current Day**
+**2023 - 2024**
 
 - Took a gap year to travel and see the world, gaining a broader perspective on global cultures.
 - Focused on self-directed learning and development in software development and programming, with a particular emphasis on emerging technologies such as AI and Crypto.
