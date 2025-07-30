@@ -1,8 +1,8 @@
 ---
 title: "Innovating with BAXUS: A Deep Dive into My Hackathon Projects"
-date: 2024-04-30
+date: 2025-04-30
 tags: [hackathon, ai, computer-vision, browser-extension, web3]
-excerpt: I participated in a hackathon focused on developing innovative solutions for the fine spirits industry, building three distinct projects: an AI whisky sommelier, computer vision bottle recognition, and a price comparison browser extension.
+excerpt: I participated in a hackathon focused on developing innovative solutions for the fine spirits industry, building three distinct projects - an AI whisky sommelier, computer vision bottle recognition, and a price comparison browser extension.
 links:
   - name: Project BOB
     url: https://github.com/LoreviQ/Baxus-BOB

@@ -17,11 +17,12 @@ export default function CV() {
                 {/* Introduction */}
                 <section className="bg-theme-bg-card rounded-lg p-8 shadow-sm">
                     <p className="text-theme-text-light leading-relaxed">
-                        I'm a highly skilled full-stack developer and Computer Science graduate with expertise in modern web technologies,
-                        blockchain development, and system architecture. I've successfully delivered multiple production applications,
-                        including an award-winning Web3 project and various open-source tools. Proficient in TypeScript, Go and Python,
-                        with experience in both frontend and backend development. Passionate about creating intuitive user experiences and
-                        implementing complex technical solutions.
+                        I am a highly skilled full-stack developer and Computer Science graduate with expertise in modern web technologies,
+                        AI, and cloud architecture. My deep passion for technology drives me to constantly learn and build new things,
+                        often working on individual projects and acquiring new skills in my downtime. I've successfully delivered multiple
+                        production applications, including an award-winning Web3 project and various open-source tools. Proficient in
+                        TypeScript, Go, and Python, with a strong focus on creating intuitive user experiences and implementing robust,
+                        secure technical solutions.
                     </p>
                 </section>
 
@@ -34,36 +35,85 @@ export default function CV() {
                     <div className="space-y-12">
                         <div className="bg-theme-bg-card rounded-lg p-8 shadow-sm">
                             <div className="flex justify-between items-start mb-4">
-                                <h3 className="font-display text-2xl font-bold text-theme-text">Unemployed</h3>
-                                <span className="text-theme-text-light text-sm px-3 py-1 bg-theme-bg rounded">2023 - Current Day</span>
+                                <h3 className="font-display text-2xl font-bold text-theme-text">Soft Pauer</h3>
+                                <span className="text-theme-text-light text-sm px-3 py-1 bg-theme-bg rounded">2025 - Current Day</span>
                             </div>
+                            <h4 className="font-display text-lg font-semibold text-theme-primary mb-4">Full Stack Software Engineer</h4>
                             <p className="text-theme-text-light mb-6 leading-relaxed">
-                                After gaining valuable experience at The Curve Group, I took a deliberate gap year to focus on personal and
-                                professional development. During this time, I traveled to broaden my horizons and worked on advancing my skills
-                                in software development, particularly in areas that align with my passion for programming and cutting-edge technologies.
+                                Full-stack software engineer specializing in AI-powered enterprise applications and cloud infrastructure. As the lead engineer, I drove the design, development, and deployment of a complex multi-agent AI system, taking it from initial concept to a fully operational, production-ready product. My key responsibilities and expertise included:
                             </p>
                             <ul className="list-none text-theme-text-light space-y-3">
                                 <li className="flex items-start">
                                     <span className="text-theme-primary mr-3">•</span>
-                                    <span>Took a gap year to travel and see the world, gaining a broader perspective on global cultures</span>
+                                    <span><strong>AI Agent System Development & Deployment</strong>: Spearheaded the end-to-end development of a scalable multi-agent AI system, integrating advanced language models, sophisticated function calling, and comprehensive performance optimization strategies to deliver a robust enterprise solution</span>
                                 </li>
                                 <li className="flex items-start">
                                     <span className="text-theme-primary mr-3">•</span>
-                                    <span>Focused on self-directed learning and development in software development and programming, with a particular emphasis on emerging technolgogies such as AI and Crypto</span>
+                                    <span><strong>Secure Cloud Infrastructure & DevOps</strong>: Designed and deployed the entire Azure cloud environment, implementing a secure SDLC by integrating static code analysis (Bandit) and automated security checks directly into CI/CD pipelines. Established private networks and strict access controls to minimize the attack surface and ensure secure operational practices</span>
                                 </li>
                                 <li className="flex items-start">
                                     <span className="text-theme-primary mr-3">•</span>
-                                    <span>Participated in several hackathons, in which I won multiple prizes for my projects</span>
+                                    <span><strong>Application Security</strong>: Developed core project functionalities with a security-first mindset, meticulously handling user inputs and implementing robust defenses against common vulnerabilities like Remote Code Execution (RCE) and SQL Injection</span>
                                 </li>
                                 <li className="flex items-start">
                                     <span className="text-theme-primary mr-3">•</span>
-                                    <span>Completed personal projects such as SketchSlides, a modern responsive slideshow PWA, and WebNovelClient, a full stack project for sharing user uploaded novels</span>
+                                    <span><strong>Advanced AI Security</strong>: Conducted in-depth security architecture reviews and threat modeling for the AI agent system, proactively addressing unique AI-specific risks such as prompt injection, sensitive data leakage, and denial-of-service scenarios, adhering to <strong>OWASP Top 10 for LLMs</strong> principles</span>
                                 </li>
                                 <li className="flex items-start">
                                     <span className="text-theme-primary mr-3">•</span>
-                                    <span>Used the time to deepen my expertise in technologies such as Golang, React and CI/CD aligning my skills with my long-term career goals in software development</span>
+                                    <span><strong>Security Monitoring & Compliance Readiness</strong>: Implemented comprehensive logging, version control, and alerting systems to enhance visibility, support continuous monitoring, and contribute to overall compliance readiness</span>
                                 </li>
                             </ul>
+                            <p className="text-theme-text-light mt-6 leading-relaxed">
+                                Responsible for transforming business requirements into robust, scalable technical solutions while maintaining high code quality standards and security best practices.
+                            </p>
+                        </div>
+
+                        <div className="bg-theme-bg-card rounded-lg p-8 shadow-sm">
+                            <div className="flex justify-between items-start mb-4">
+                                <h3 className="font-display text-2xl font-bold text-theme-text">Unemployed</h3>
+                                <span className="text-theme-text-light text-sm px-3 py-1 bg-theme-bg rounded">2023 - 2024</span>
+                            </div>
+                            <div className="text-theme-text-light space-y-4">
+                                <p className="leading-relaxed">
+                                    Took a gap year to travel and see the world, gaining a broader perspective on global cultures. During this time, I focused on self-directed learning and development in software engineering, with a particular emphasis on emerging technologies and best practices.
+                                </p>
+                                
+                                <p className="leading-relaxed">
+                                    This period allowed me to gain hands-on experience across several key technology areas:
+                                </p>
+                                
+                                <ul className="list-none space-y-3 ml-4">
+                                    <li className="flex items-start">
+                                        <span className="text-theme-primary mr-3">•</span>
+                                        <span><strong>AI Agents</strong>: Building and deploying complex agentic systems through personal projects</span>
+                                    </li>
+                                    <li className="flex items-start">
+                                        <span className="text-theme-primary mr-3">•</span>
+                                        <span><strong>Blockchain</strong>: Understanding core blockchain principles and deploying simple decentralized applications</span>
+                                    </li>
+                                    <li className="flex items-start">
+                                        <span className="text-theme-primary mr-3">•</span>
+                                        <span><strong>Cloud Platforms</strong>: Deepened expertise in Google Cloud Platform (GCP), including implementing CI/CD best practices within the GCP ecosystem</span>
+                                    </li>
+                                    <li className="flex items-start">
+                                        <span className="text-theme-primary mr-3">•</span>
+                                        <span><strong>Databases</strong>: Explored various database solutions, from self-hosting to cloud options, encompassing both SQL and NoSQL paradigms</span>
+                                    </li>
+                                    <li className="flex items-start">
+                                        <span className="text-theme-primary mr-3">•</span>
+                                        <span><strong>Authentication</strong>: Mastered diverse authentication methods, from basic JWT implementations to advanced OAuth 2.0 flows</span>
+                                    </li>
+                                </ul>
+                                
+                                <p className="leading-relaxed">
+                                    I enhanced my proficiency in React, TypeScript, Rust, Python, and Go through extensive personal coding projects. This period was also highly productive in terms of practical application - I participated in several hackathons, winning multiple prizes for my projects, and completed personal projects such as SketchSlides, a modern responsive slideshow PWA, and WebNovelClient, a full-stack project for sharing user-uploaded novels.
+                                </p>
+                                
+                                <p className="leading-relaxed">
+                                    Overall, I used this time strategically to align my skills with my long-term career goals in software development and security, ensuring I was well-prepared for the next phase of my professional journey.
+                                </p>
+                            </div>
                         </div>
 
                         <div className="bg-theme-bg-card rounded-lg p-8 shadow-sm">
@@ -82,15 +132,15 @@ export default function CV() {
                                 </li>
                                 <li className="flex items-start">
                                     <span className="text-theme-primary mr-3">•</span>
-                                    <span>Frequent usage of SQL, PowerQuery, Excel and Power BI to create and distribute reports</span>
+                                    <span>Frequent usage of SQL, PowerQuery, Excel, and Power BI to create and distribute reports</span>
                                 </li>
                                 <li className="flex items-start">
                                     <span className="text-theme-primary mr-3">•</span>
-                                    <span>Extensive customization of the front end of the database using JavaScript, PowerApps, Power Automate and Azure Functions</span>
+                                    <span>Extensive customization of the front end of the database using JavaScript, PowerApps, Power Automate, and Azure Functions</span>
                                 </li>
                                 <li className="flex items-start">
                                     <span className="text-theme-primary mr-3">•</span>
-                                    <span>Experienced working in a small self managed team (2-3 people)</span>
+                                    <span>Experienced working in a small self-managed team (2-3 people)</span>
                                 </li>
                                 <li className="flex items-start">
                                     <span className="text-theme-primary mr-3">•</span>
@@ -158,7 +208,7 @@ export default function CV() {
                                 </li>
                                 <li className="flex items-start">
                                     <span className="text-theme-primary mr-3">•</span>
-                                    <span className="text-theme-text-light">Python: Utilized for physics/maths scripts and machine learning algorithms</span>
+                                    <span className="text-theme-text-light">Python: Primary language for building and deploying AI agent systems and machine learning algorithms</span>
                                 </li>
                                 <li className="flex items-start">
                                     <span className="text-theme-primary mr-3">•</span>
@@ -180,19 +230,39 @@ export default function CV() {
                             <ul className="space-y-3">
                                 <li className="flex items-start">
                                     <span className="text-theme-primary mr-3">•</span>
-                                    <span className="text-theme-text-light">DevOps: CI/CD implementation and cloud deployment</span>
+                                    <span className="text-theme-text-light">Cloud Platforms: Extensive experience with Azure; hands-on experience with Google Cloud Platform (GCP)</span>
                                 </li>
                                 <li className="flex items-start">
                                     <span className="text-theme-primary mr-3">•</span>
-                                    <span className="text-theme-text-light">Operating Systems: Experienced with Windows and various Linux distributions</span>
+                                    <span className="text-theme-text-light">DevOps: CI/CD implementation, cloud deployment, and best practices (Azure, GCP)</span>
                                 </li>
                                 <li className="flex items-start">
                                     <span className="text-theme-primary mr-3">•</span>
-                                    <span className="text-theme-text-light">Cyber-Security: Knowledge in networking, OS security, cryptography, and OSINT</span>
+                                    <span className="text-theme-text-light">Cyber-Security: Knowledge of application security (RCE, SQL Injection), AI security (OWASP Top 10 for LLMs), network security, OS security, cryptography, and OSINT</span>
                                 </li>
                                 <li className="flex items-start">
                                     <span className="text-theme-primary mr-3">•</span>
-                                    <span className="text-theme-text-light">Problem Solving: Demonstrated through programming challenges and physics problems</span>
+                                    <span className="text-theme-text-light">AI Agents: Experience in building and deploying complex agentic systems</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <span className="text-theme-primary mr-3">•</span>
+                                    <span className="text-theme-text-light">Databases: Proficient in designing and managing both SQL and NoSQL databases, from self-hosted to cloud solutions</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <span className="text-theme-primary mr-3">•</span>
+                                    <span className="text-theme-text-light">Authentication: Expertise in various methods, including JWT and OAuth 2.0</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <span className="text-theme-primary mr-3">•</span>
+                                    <span className="text-theme-text-light">Blockchain: Understanding of core principles and experience deploying simple decentralized applications</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <span className="text-theme-primary mr-3">•</span>
+                                    <span className="text-theme-text-light">Operating Systems: Strong experience with all operating systems, particularly Linux (daily driver)</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <span className="text-theme-primary mr-3">•</span>
+                                    <span className="text-theme-text-light">Problem Solving: Demonstrated through complex engineering challenges and technical problem-solving</span>
                                 </li>
                                 <li className="flex items-start">
                                     <span className="text-theme-primary mr-3">•</span>
@@ -200,11 +270,11 @@ export default function CV() {
                                 </li>
                                 <li className="flex items-start">
                                     <span className="text-theme-primary mr-3">•</span>
-                                    <span className="text-theme-text-light">Self-Management: Strong ability to organize and conduct independent research</span>
+                                    <span className="text-theme-text-light">Self-Management: Strong ability to organize and conduct independent research and project development</span>
                                 </li>
                                 <li className="flex items-start">
                                     <span className="text-theme-primary mr-3">•</span>
-                                    <span className="text-theme-text-light">Teamwork: Collaborated effectively in small teams during hackathons and project development</span>
+                                    <span className="text-theme-text-light">Teamwork: Led a small team (3 people) in the development and deployment of the AI agent system, taking primary ownership of project direction and execution</span>
                                 </li>
                             </ul>
                         </div>
@@ -221,7 +291,7 @@ export default function CV() {
                             <p className="leading-relaxed">
                                 Particularly interested in machine learning, I performed my final year project on analysis of machine learning
                                 algorithms and achieved the highest grade. Interests in a wide range of technologies, from AI, cloud computing,
-                                different operating systems, networking and encryption.
+                                different operating systems, networking, and encryption.
                             </p>
                             <ul className="space-y-3">
                                 <li className="flex items-start">
